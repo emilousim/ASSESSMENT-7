@@ -1,0 +1,23 @@
+Results for the extraLargeArray
+insert 1.9388514799999998 s
+append 60.262416 ms
+
+Results for the tinyArray
+insert 51.728 μs
+append 171.626 μs
+
+Results for the smallArray
+insert 91.365 μs
+append 203.704 μs
+
+Results for the mediumArray
+insert 492.577 μs
+append 429.35 μs
+
+Results for the largeArray
+insert 21.335801 ms
+append 5.736316 ms
+
+Over the course of the five different tests being run, the arrays are going up in size by adding one zero. Each time a zero is added the insert almost doubles and the append increases in smaller amounts. The amount of run time each array takes is slowly creeping upwards in time because the amount of data that's being processed is increasig, causing the array to take longer to insert/append. Overall, I believe appending is faster because it increases in smaller periods of time, meaning it's performing the function more quickly than the other, inserting.
+
+BONUS: Insert and append are both decent functions to use in this scenario, but they have differences that cause a difference in speed. The insert function has to move all the values up to be able to insert at the beginning. Append just adds the value to the end of the list, which just changes the length of the array. Insert has to do more work, and thus takes longer and is less efficient in this case. 
