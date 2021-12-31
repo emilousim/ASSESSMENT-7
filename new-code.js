@@ -1,24 +1,24 @@
+  const addToZero = (arr) => {
+    const sumSet = new Set();
+ 
+    let sum = 0; 
+    // line 24 sets our desired sum to be 0
+    for (let i = 0 ; i < arr.length ; i++) // check each element in array
+    {
+        sum += arr[i];
+        // If prefix sum is 0
+        // or it is already present
+        if (sum === 0 || sumSet.has(sum)) //.has function will check if we have the sum we want and return a boolean value
+            return true; 
+ 
+        sumSet.add(sum);
+    }
+    return false;
+}
+let newArr = [3, 5, 2, -4, 8, 11]
+addToZero(newArr)
 
-function addToZero(arr) {
-
-    // check each element in array
-    for (var i = 0; i < arr.length; i++) { 
-  
-      // check each other element in the array
-      for (var j = i + 1; j < arr.length; j++) {
-  
-        // determine if these two elements sum to S
-        if (arr[i] + arr[j] === 0) {
-          console.log("true")}
-
-          else{console.log( "false")}
-      }
-    }}
-  
-  let newArr = [3, 5, 2, -4, 8, 11]
-  addToZero(newArr)
-
-
+// big o = o(n)
 //addToZero took 11.983099937438965 milliseconds
 
 function hasUniqueChars(string){
@@ -35,7 +35,7 @@ function hasUniqueChars(string){
     }
     return true
 }
-
+//big o = o(n)
 //hasUniqueChars took 0.22029995918273926 milliseconds
 
 const str = 'We promptly judged antique ivory buckles for the next prize';
@@ -54,7 +54,7 @@ const isPangram = (str = '') => {
    return !alphaArr.length;
 };
 console.log(isPangram(str));
-
+//big o = o(n)
 //isPangram took 0.3046998977661133 milliseconds
 
 const { performance } = require('perf_hooks');
@@ -63,6 +63,7 @@ function findLongestWord(str) {
     let lengths = str.split(' ').map(word => word.length)
     return Math.max(...lengths)
   }
+  //big o = o(n)
 //   findLongestWord took 0.4754999876022339 
 
 
